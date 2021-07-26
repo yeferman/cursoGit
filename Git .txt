@@ -1,0 +1,122 @@
+yeferman.github.io (crear pagina htm mediante dominio publico)
+
+
+configurar usuario por primera vez
+ git config --global user.email "yeysonqqc1@gmail.com"
+ git config --global user.name "Yeyson Quiñones"
+ 
+
+git remote -v (ver lista de repositorios remotos)
+git remote add upstream [link del repositorio]
+
+- - - - -  - - - - - -  - - - - -  - - -  - - - - - - - - - - - -- - - - - - - -  - - - - - - -- 
+-git init  (crear repositorio)
+-git status -s (estado de los archivos del repositorio)
+-git add [nombre archivo]  (mandar archivo al stage area)
+-git add --all (agragar todos los archivos al stage)
+-git commit -m "Descripcion" (agregar al repositorio)
+-git commit -am "Descripcion"   (covinacion de add y commit)
+-git push -o- git push origin master (subir contenido)
+-git pull -o- git pull origin master (bajar contenido) 
+--------------------------------------------------------------------------
+-git log  --oneline  (historial de commits)
+
+-git commit --amend (modificar descripcion de un commit) (Esc- block editar) (:wq salir) 
+
+-------------------------------
+-git tag -a 22-01-20v1 -m "version 1 del proyecto" (agregar una version)
+-git push origin master --tags
+-git clone
+
+---------------------------------------
+- - - - - - - - - - - -
+CREAR RAMA 
+-git branch [Nombre de la ram]
+- - - -  - - - - - -  -
+- - - - - - - - - - - -
+VER EN QUE RAMA ESTOY
+-git branch 
+- - - -  - - - - - -  -
+- - - - - - - - - - - -
+CAMBIAR DE RAMA 
+-git chekout [rama a la que me quiero mover]
+- - - -  -
+- - - - - - - - - - - -
+FUCIONAR RAMA
+-git merge [nombre de la rama]
+- - - -  - - - - - -  -
+
+
+- - - - - - - - - - - -
+ELIMINAR RAMA
+-git branch -d  [nombre de la rama]
+- - - -  - - - - - -  -
+--------------------------------
+eliminar archivos trakeados y no trakeados 
+------------------------------------------
+git clean -f [nombre archivo] (limpiar archivos no trakeados)(son archivos a los que nunca se le ha hecho commit)
+git clean -n (ver lista de archvos no trakeados(antes de eliminar ))
+
+git checkout [nombre archivo] (Eliminar archivos trakeados)(archivos modificados que ya tienen un commit)(solo se eliminaria la modificacion sin commit)
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------
+git reset HEAD [nombre archivo] pasar un archivos del estado 2 (stage area) al estado 1(working dyretory (M))
+--------------------------------------------------------------------------------
+
+-------------------------------------------------------------------
+Revertir commit
+git revert [hash del commit desde el que se va a devolver]  
+(el archivo o archivos pertenecietes al commit destino vuelven al area de trabajo(M))
+-------------------------------------------------------------------
+
+git mv rachivo_viejo archivo_nuevo (renombrar un archivo en el stage)
+----------------------------------------------------------------------
+
+
+
+estructura de datos pila
+
+git stash (crear una pila de datos)
+git stash pop (recuperar pila de datos)
+git stash clear (limpiar la pila de datos)
+-------------------------------------------------------------------------
+crear una llave ssh
+
+ssh-keygen -t rsa -b 4096 -C "yeysonqqc1@gmail.com"
+
+esa clave se añade a github
+------------------------------------save
+
+
+git fetch [respositorio/rama] (traer los ultimos cambios sin combinarlos con lo que ya hay)
+git checkout [respositorio/rama] (ir al commit que contienen los cambios)
+git merge [respositorio/rama] (mexclar los nuevos cambios)
+-----------------------------------------------------------
+
+git show [id del commit]
+git diff [id commit 1] [id commit 2]
+
+
+git shortlog
+git shortlog --summary --numbered
+
+
+git describe
+----------------------------------------------------
+
+git cherry-pick [id del commmit] (mover un commit de una rama a otra; es como hacer un merge)
+----------------------------
+historial de cambios en un archivo
+git blame [file name]
+git blame -L 3,5 [file name]
+-----------------------------
+git grep [palabra] (buscar patron de palabras en el proyecto o en un commit en espcifico)
+
+gitignore  (carpeta en la que se incluye la ruta de archivos para que no se puedan trakear (mandarlos al stage y hacer commit))
+
+git config --global alias.<el alias> <comando>
+
+
